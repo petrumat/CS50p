@@ -7,4 +7,6 @@ print(test_var)
 
 # Input string from user and prints it
 name = input("What's your name? ")
-print(f"hello, {name}")
+print("hello, " + name) # Concatenating strings is one way to use print()
+print("hello,", name, name)  # This is the simplest way to use print() -> adds " " automatically between each arguments
+print(f"hello, {name}") # This is the formatted way to use print()
