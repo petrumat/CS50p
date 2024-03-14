@@ -13,5 +13,9 @@ print("hello,", name, name)  # This is the simplest way to use print() -> adds '
 print("hello,", name, name, sep='_')  # This is the simplest way to use print() -> adds specified separator ('_') between each arguments
 print(f"hello, {name}") # This is the formatted way to use print()
 
+# To print special characters use '\' (backslash or escape character)
+print("Hello, \"friend\".")
+print('Hello, "friend".')   # Or interchange " with ' (but be consistent)
+
 # end=None => end='\n' and
 # sep=None => sep=' ' (default values)
