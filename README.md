@@ -14,4 +14,6 @@ Lecture 0:
 
 Lecture 1:   
 - conditionals, boolean operations, comparisons   
-- 
+- if, elif, else, and, or, not   
+- pythonic way to implement conditional   
+- match and case (similar to switch and case from Java)
