@@ -10,11 +10,11 @@ while(True):
     if(i >= MAX_TRY):
         break
 
-    # Check only for chars and not digits or separators.
+    # Check only for chars and not digits, separators or symbols.
     # This is a rudimentary method. More pythonic is to 
     # use lambda and regex input sanitation.
     if(not name.isalpha()):
-        print("Name contains digits or separators. Try again.")
+        print("Name contains digits, separators or symbols. Try again.")
         name = input()
         i += 1
     else:
