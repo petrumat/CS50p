@@ -5,9 +5,11 @@ def main():
 
 
 def square(a = 0.0):
-    return a * a
-    # or a ** 2
-    # oe pow(a, 2)
+    a **= 2
+    return a
+    # or return a * a
+    # or return a ** 2
+    # oe return pow(a, 2)
 
 
 main()

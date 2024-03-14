@@ -10,7 +10,8 @@ Lecture 0:
 - str methods: isalpha(), strip(), title(), split()   
 - interactive mode   
 - int() and float() type converters, round()  
-- formatting numbers for print()   
--  
+- formatting numbers for print(), numeric types   
 
-Lecture 1:    
+Lecture 1:   
+- conditionals, boolean operations, comparisons   
+- 
