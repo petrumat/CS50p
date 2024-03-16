@@ -21,6 +21,8 @@ Lecture 1 = Conditionals:
 
 Lecture 2 = Loops:
 - while, break, continue, return   
-- for, range(), [pythonic way], str concatenation   
-- try, except, finally, with, raise   
+- for, range(), [pythonic way], str concatenation     
 - data types (list: constructor, assignment, len(); dictionaries: assignment), None   
+
+Lecture 3 = Exceptions:   
+- try, except, finally, with, raise   
