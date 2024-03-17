@@ -44,3 +44,6 @@ Lecture 5 = Unit Tests:
 - assert, AssertionError, with   
 - pytest library: raises()   
 - pytest and test folders: __init__.py   
+
+Lecture 6 = File I/O:
+- 
