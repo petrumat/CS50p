@@ -1,4 +1,10 @@
-from hello import print_msg
+from hello import hello
 
-def test_print_msg():
-    assert print_msg("hello,", "world") == "hello, world"
+
+def test_hello_default():
+    assert hello() == "hello, world"
+
+
+def test_hello_argument():
+    for name in ["Hermione", "Harry", "Ron"]:
+        assert hello(name) == "hello, " + name
