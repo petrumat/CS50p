@@ -48,4 +48,4 @@ Lecture 5 = Unit Tests:
 Lecture 6 = File I/O:
 - os library (builtin python): file object, open(), close(), write(), read()
 - with open() as file pythonic statement   
-- os library: readlines()   
+- os library: readlines() the pythonic way   
