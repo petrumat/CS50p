@@ -36,4 +36,8 @@ Lecture 4 = Libraries:
 - sys library: argv[], exit()   
 - slicing data structure (list)   
 - ANSI color escape codes   
-- packages: cowsay   
+- packages [pip install lib_name --user]: cowsay, requests   
+- json library: dumps()   
+- importing my own libraries/functionalities in same folder; __name__ keyword   
+
+Lecture 5 = Unit Tests:   

@@ -1,5 +1,5 @@
 import cowsay
-from sys import argv
+from sys import argv, exit
 
 def main():   
     if len(argv) == 1:
@@ -9,7 +9,7 @@ def main():
     elif len(argv) == 3:
         character(argv[1], "Hello, " + argv[2] + ".")
     else:
-        print("Too many arguments.")
+        exit("Too many arguments.")
 
 
 def print_all_characters():
