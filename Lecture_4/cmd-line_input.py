@@ -1,4 +1,4 @@
-from sys import argv
+from sys import argv, exit
 
 # ANSI color escape codes
 class colors:
@@ -25,9 +25,10 @@ class bright_colors:
 
 
 def main():
-    print_prog_name()
-    print_name()
-    print_name_conditional()
+    # print_prog_name()
+    # print_name_try()
+    # print_name_conditional()
+    print_names()
 
 
 def print_prog_name():
@@ -35,7 +36,7 @@ def print_prog_name():
     print(f"program name is {colors.GREEN}{prog_name}{colors.RESET}")
 
 
-def print_name():
+def print_name_try():
     try:
         print(f"hello, my name is {colors.CYAN}{argv[1]}{colors.RESET}.")
     except IndexError:
@@ -43,13 +44,26 @@ def print_name():
 
 
 def print_name_conditional():
-    # Or interrogate the length of the command-line arguments list
+    # Interrogate the length of the command-line arguments list
     if len(argv) < 2:
-        print("Too few arguments.")
+        exit("Too few arguments.")
     elif len(argv) > 2:
-        print("Too many arguments.")
-    else:
-        print(f"hello, my name is {colors.CYAN}{argv[1]}{colors.RESET}.")
+        exit("Too many arguments.")
+    
+    print(f"hello, my name is {colors.CYAN}{argv[1]}{colors.RESET}.")
+
+
+def print_names():
+    if len(argv) < 2:
+        exit("Too few arguments.")
+
+    # Start at argv[1] to end of argv
+    for arg in argv[1:]:
+        print("My name is", arg)
+
+    # Start at argv[1] to end of argv except last element
+    for arg in argv[1:-1]:
+        print("My name is", arg)
 
 
 main()
