@@ -46,4 +46,6 @@ Lecture 5 = Unit Tests:
 - pytest and test folders: __init__.py   
 
 Lecture 6 = File I/O:
-- os library: file object, open(), close(), write(), read()   
+- os library (builtin python): file object, open(), close(), write(), read()
+- with open() as file pythonic statement   
+- os library: readlines()   
