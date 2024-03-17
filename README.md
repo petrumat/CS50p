@@ -41,3 +41,5 @@ Lecture 4 = Libraries:
 - importing my own libraries/functionalities in same folder; __name__ keyword   
 
 Lecture 5 = Unit Tests:   
+- assert, AssertionError   
+- pytest   
