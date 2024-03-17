@@ -25,4 +25,8 @@ Lecture 2 = Loops:
 - data types (list: constructor, assignment, len(); dictionaries: assignment), None   
 
 Lecture 3 = Exceptions:   
-- try, except, finally, with, raise   
+- try, except, else, pass   
+- errors: SyntaxError (can't be caught), ValueError, NameError (parameter not defined), KeyboardInterrupt (ctrl+c from user/os)   
+
+Lecture 4 = Libraries:   
+- import, modules: random (choice)   
