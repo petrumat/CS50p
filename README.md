@@ -29,4 +29,8 @@ Lecture 3 = Exceptions:
 - errors: SyntaxError (can't be caught), ValueError, NameError (parameter not defined), KeyboardInterrupt (ctrl+c from user/os)   
 
 Lecture 4 = Libraries:   
-- import, modules: random (choice)   
+- import, from, modules,   
+- random library: choice(), randint(), shuffle()   
+- statistics library: mean()   
+- sys library: argv[]   
+- ANSI color escape codes   
