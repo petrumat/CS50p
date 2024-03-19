@@ -45,7 +45,23 @@ Lecture 5 = Unit Tests:
 - pytest library: raises()   
 - pytest and test folders: __init__.py   
 
-Lecture 6 = File I/O:
-- os library (builtin python): file object, open(), close(), write(), read()
+Lecture 6 = File I/O:   
+- os library (builtin python): file object, open(), close(), write(), read()   
 - with open() as file pythonic statement   
 - os library: readlines() the pythonic way   
+- csv library: reader, DictReader, writer, DictWriter   
+- sorting list/dict from file or local list/dict
+- searching dict by key or value   
+- lambda functions for sorting   
+- pillow (PIL) library for image/video processing: save()   
+
+Lecture 7 = Regular Expressiosn (regex):
+- validate email from str: interogate chars, split(), endswith()   
+- re library: search(), sub() [finding and formating]   
+- regex patterns, multiple flags (VERBOSE explinations)   
+- walrus operator
+- extract username from url [non-capturing group]
+- online tools to create, test, visualize regex (regex101.com, debuggex.com, github_regex-vizualizer)   
+   
+Lecture 8 = Object-Oriented Programming:   
+- 
