@@ -64,4 +64,17 @@ Lecture 7 = Regular Expressions (regex):
 - online tools to create, test, visualize regex (regex101.com, debuggex.com, github_regex-visualizer)   
    
 Lecture 8 = Object-Oriented Programming:   
-- 
+- python's programming paradigms: procedural (execute code step by step), functional (powerful functions + lambda), OOP (abstraction, classes, encapsulation, methods, overloading, inheritance etc.)   
+- tuples, defensive programming, TypeError   
+- classes, "..." to skip, attributes ("." syntax), objects   
+- correctness of data, validation, error raising    
+- instance variables + private "'_'var_name" convention (honor system)   
+- instance methods [self]: __init__ = initializer, @property = getter, @attribute_name.setter = setter, __str__ = print method, __add__ = operator overloading   
+- class methods (similar to Singleton) [cls]: @classmethod   
+- class variables (shared by all functionality of the class)   
+- inheritance, superclasses, super()   
+
+Lecture 9 = Et Cetera:   
+- data type -> set   
+- global variables, Unbound Local Error   
+- constant variables (more like honor system)   
