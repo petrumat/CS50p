@@ -55,13 +55,13 @@ Lecture 6 = File I/O:
 - lambda functions for sorting   
 - pillow (PIL) library for image/video processing: save()   
 
-Lecture 7 = Regular Expressiosn (regex):
-- validate email from str: interogate chars, split(), endswith()   
-- re library: search(), sub() [finding and formating]   
-- regex patterns, multiple flags (VERBOSE explinations)   
+Lecture 7 = Regular Expressions (regex):
+- validate email from str: interrogate chars, split(), endswith()   
+- re library: search(), sub() [finding and formatting]   
+- regex patterns, multiple flags (VERBOSE explanations)   
 - walrus operator
 - extract username from url [non-capturing group]
-- online tools to create, test, visualize regex (regex101.com, debuggex.com, github_regex-vizualizer)   
+- online tools to create, test, visualize regex (regex101.com, debuggex.com, github_regex-visualizer)   
    
 Lecture 8 = Object-Oriented Programming:   
 - 
