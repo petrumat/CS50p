@@ -78,3 +78,12 @@ Lecture 9 = Et Cetera:
 - data type -> set   
 - global variables, Unbound Local Error   
 - constant variables (more like honor system)   
+- dynamically typed engine (vs. strongly typed), type hints, mypy, "var: type", "func() -> return_type"   
+- document strings, comments conventions, restructured text   
+- sys.argv, '\-initial', '\-\-word', argparse library   
+- unpacking and operators: '\*', '\*\*', named parameters, variable number of arguments: '\*args', '\*\*kwargs'   
+- programming models (procedural, OOP, functional): map(), filter   
+- list comprehension, dictionary comprehension   
+- enumerate   
+- generate, yield statement   
+- text-to-speech pyttsx4
