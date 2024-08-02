@@ -9,7 +9,7 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 
 # Lectures
 
-## Lecture 0: Variables, Functions
+## [Lecture 0: Functions, Variables](https://cs50.harvard.edu/python/2022/weeks/0/)
 
 ### Concepts
 - **First Program**: *code prog_name.py* to create an empty python program -> *python prog_name.py* to run the program.
@@ -21,16 +21,31 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 - **Formatting Strings**: *print(f"hello, {name}")* where *f* is a special indicator for Python to treat this string a special way. *{name}* is a variable in this case. See documentation for mini language!
 - **Formatting Numbers**: separator for groups of three digits, starting from the decimal point and moving left: *print(f"{x:,}")*. Show decimals (2): *print(f"{x:.2f}")*. Show max (10) decimals, but exclude unnecessary "0": *print(f"{x:.10g}")*.
 - **User Functions**: created with *def* keyword and indentation to understand what is part of the function. To add default values to function parameters assign them in function declaration. A *main()* function is recommended to be created and called in a python program. A function can return one variable. This “passing back” value is called a *return* value.
-- **Interactive mode** is a feature of Python where code can be executed interactively in terminal. Enter *python* in terminal and ">>>" will appear for thi feature.
+- **Interactive mode** is a feature of Python where code can be executed interactively in terminal. Enter *python* in terminal and ">>>" will appear for this feature.
 
-
+### Problem Set 0
+- **Indoor Voice**: a python program that converts user input into lowercase.
+- **Playback Speed**: a python program that outputs the same input, replacing each space with "...".
+- **Making Faces**: a python program that changes ":)" to 🙂 and ":(" to 🙁.
+- **Einstein**: a python program that determines energy based on mass.
+- **Tip Calculator**: a python program that calculates tips depending on dollar amounts and percentages.
 
 
 ## Lecture 1: Conditionals
-- conditionals, boolean operations, comparisons   
-- if, elif, else, and, or, not   
-- pythonic way to implement conditional   
+
+### Concepts
+- **Conditionals**: allow the program to make decisions. *Mathematical operators* consist of "<", ">", "<=", ">=", "==" and "!=". *Boolean operators* consist of *and*, *or*, *not*., comparisons
+- **if statements**: use boolean values (*true* or *false*) to decide whether or not to execute the code. elif, else
+- pythonic way to implement conditional
 - match and case (similar to switch and case from Java)
+
+### Problem Set 1
+- **Deep Thought**: 
+- **Home Federal Savings Bank**: 
+- **File Extensions**: 
+- **Math Interpreter**: 
+- **Meal Time**: 
+
 
 ## Lecture 2: Loops
 - while, break, continue, return   
