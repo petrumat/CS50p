@@ -4,14 +4,15 @@ MAX_TRY = 3
 def main():
     # get_and_print_int("x")
 
-    # get_and_print_int_pass("x")
+    get_and_print_int_pass("y")
 
-    x = get_int("What's the number?", "x is not an integer.")
-    if x is not None:
-        print(f"x is {x}")
+    # z = get_int("What's the number?", "z is not an integer.")
+    # if z is not None:
+    #     print(f"z is {z}")
 
 
 def get_and_print_int(val_name):
+    # Catches a ValueError 3 times and demonstrates else
     tries = 0
     while True:
         try:
@@ -25,7 +26,7 @@ def get_and_print_int(val_name):
                 print("Maximum tries to input a number exceed.")
                 break
         else:
-            print(f"x is {n}")
+            print(f"{val_name} is {n}")
             break
 
 
@@ -37,7 +38,6 @@ def get_and_print_int_pass(val_name):
             return 0
         except ValueError:
             pass
-            print("Not an integer.")
 
 
 # This function will return None if no number is get received user
