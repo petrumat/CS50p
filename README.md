@@ -72,7 +72,7 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 - [Exceptions](https://cs50.harvard.edu/python/2022/notes/3/#exceptions): 
 are things that go wrong within our code. For example: *SyntaxError* are those that require you to double-check that you typed in your code correction, *runtime errors* refer to those created by unexpected behavior within your code, *ValueError* occurs when a variable type is not used correctly, *NameError* describes a parameter not defined, *KeyboardInterrupt* is raised when ctrl+c from user/os stops the code from executing. As programmers, we should be defensive to ensure that our users are entering what we expected. **Never trust users to follow instructions or to comply to inputs or actions**.
 - [Try](https://cs50.harvard.edu/python/2022/notes/3/#try): is a block that lets you test code for errors. It is used in conjunction with *except* and *else*.
--[Pass](https://cs50.harvard.edu/python/2022/notes/3/#pass): is a statement that does nothing. It can be used when a statement is required syntactically but the program requires no action.
+-  [Pass](https://cs50.harvard.edu/python/2022/notes/3/#pass): is a statement that does nothing. It can be used when a statement is required syntactically but the program requires no action.
 - Caller vs. Callee: A caller is a function that calls another function; a callee is a function that was called. Ex: *main()* calls *print()*; *main()* is the **caller** and *print()* is the **callee**.
 - [Finally](https://docs.python.org/3/reference/compound_stmts.html#finally-clause): specifies a ‘cleanup’ handler. When a *return*, *break* or *continue* statement is executed in the *try* suite of a *try … finally* statement, the *finally* clause is also executed ‘on the way out.’ The finally block will always be executed if it is implemented in code, no matter if the try block raises an error or not.
 - [With](https://docs.python.org/3/reference/compound_stmts.html#the-with-statement): is a statement used to wrap the execution of a block with methods defined by a context manager. It is typically used with file operations or similar contexts. For more info see [PEP 343 – The “with” Statement](https://peps.python.org/pep-0343/).
@@ -88,16 +88,15 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 4: Libraries](https://cs50.harvard.edu/python/2022/weeks/4/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/4/)
-- import, from, modules,   
-- random library: choice(), randint(), shuffle()   
-- statistics library: mean()   
-- sys library: argv[], exit()   
-- slicing data structure (list)   
-- ANSI color escape codes   
-- packages [pip install lib_name --user]: cowsay, requests   
-- json library: dumps()   
-- importing my own libraries/functionalities in same folder
-- __name__ keyword (if __name__ == "__main__")   
+- [Libraries](https://cs50.harvard.edu/python/2022/notes/4/#libraries): Python supports sharing functions or features through *libraries* and *modules*. Libraries encourage reusability in code. After *installing* any library, to use it you need to *import* it. Python will *import* whole library if the desired functions are not specified: *from lib import func_1, ...*. This is a way to improve code memory / space.
+- [Random](https://cs50.harvard.edu/python/2022/notes/4/#random): is a library that comes with Python and implements pseudo-random number generators for various distributions. Functions used in this lecture include: *choice()*, *randint()*, *shuffle()*.
+- [Statistics](https://cs50.harvard.edu/python/2022/notes/4/#statistics): is another built-in module that provides functions for calculating mathematical statistics of numeric (Real-valued) data. Function used in this lecture is *mean()*.
+- [Command-Line Arguments](https://cs50.harvard.edu/python/2022/notes/4/#command-line-arguments): For increasing functionality, python supports command-line arguments passed directly at execution of the program. *sys* is a module that allows us to take arguments at the command line. *argv[]* is used to access data from command-line, where *argv[0]=program_name* or *argv[0]=path_to_program* (depending on OS). This functionality is used in conjunction with *try ... except* block and, sometimes, with *slicing* and *for* loops. Other used function in this lecture is *exit()*.
+- [Slice](https://cs50.harvard.edu/python/2022/notes/4/#slice): is a subset of a data structure (*list* in this case). With this feature the compiler can consider a different start and end of the list.
+- [Packages](https://cs50.harvard.edu/python/2022/notes/4/#packages): Python supports numerous powerful third-party libraries that add functionality. Implemented as folders, these are called *packages*. [PyPI](https://pypi.org/) is the place of all available third-party packages. To install a package use *pip install package_name --user*. Packages used in this lecture include: *cowsay*, *requests*.
+- [APIs](https://cs50.harvard.edu/python/2022/notes/4/#apis): or **application program interfaces** allow you to connect to the code of others. *requests* is popular for calling HTTP methods like: *get*, *post* etc. Usually the output of APIs is a JSON (*JavaScript Object Notation*) and python comes with a *json* library built-in with *dumps()* function to print result more readable.
+- [Making Your Own Libraries](https://cs50.harvard.edu/python/2022/notes/4/#making-your-own-libraries): to upload libraries to PyPI refer to [uploading documentation](https://packaging.python.org/en/latest/tutorials/packaging-projects/). To use local libraries make sure they are in the same folder as the program. Use __name__ keyword (if __name__ == "__main__") to divide functionality between main program and module.
+- ANSI color escape codes: are used to show terminal output more clearly.
 
 ### [Problem Set 4](https://cs50.harvard.edu/python/2022/psets/4/)
 - [Emojize](https://cs50.harvard.edu/python/2022/psets/4/emojize/): 
@@ -111,9 +110,9 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 5: Unit Tests](https://cs50.harvard.edu/python/2022/weeks/5/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/5/)
-- assert, AssertionError, with   
-- pytest library: raises()   
-- pytest and test folders: __init__.py   
+- [Unit Tests](https://cs50.harvard.edu/python/2022/notes/5/#unit-tests): are a way of testing the code with various measurements (usually automatic testing).
+- [Assert](https://cs50.harvard.edu/python/2022/notes/5/#assert): verifies the functionality of functions and if all are correct than no error messages will appear (no *AssertionError* raised). This approach is useful if functions will return something, otherwise it can't be tested with *assert*.
+- [pytest](https://cs50.harvard.edu/python/2022/notes/5/#pytest): is a third-party library that allows you to unit test your program. Learn more in [Pytest’s documentation](https://docs.pytest.org/en/7.1.x/getting-started.html). It is possible to group testing files in folders, but a file named "__init__.py" is necessary to tell python this is a package.
 
 ### [Problem Set 5](https://cs50.harvard.edu/python/2022/psets/5/)
 - [Testing my twttr](https://cs50.harvard.edu/python/2022/psets/5/test_twttr/): 
