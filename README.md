@@ -124,14 +124,14 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 6: File I/O](https://cs50.harvard.edu/python/2022/weeks/6/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/6/)
-- os library (builtin python): file object, open(), close(), write(), read()   
-- with open() as file pythonic statement   
-- os library: readlines() the pythonic way   
-- csv library: reader, DictReader, writer, DictWriter   
-- sorting list/dict from file or local list/dict
-- searching dict by key or value   
-- lambda functions for sorting   
-- pillow (PIL) library for image/video processing: save()   
+- [File I/O](https://cs50.harvard.edu/python/2022/notes/6/#file-io): Program variables are volatile, so storing data in files is essential. *os* library is a builtin python file i/o handling module. It has many functions: *open()*, *close()*, *write()*, *read()*, *readlines()* and others.
+- [open](https://cs50.harvard.edu/python/2022/notes/6/#open): Open files with appropriate type: *w*, *r*, *a*, ... Files are created automatically if they don't already exist. The default file location is the same as the program that uses them.
+- [with](https://cs50.harvard.edu/python/2022/notes/6/#with): is the pythonic way to handle file objects and automate the closing of a file.
+- [csv](https://cs50.harvard.edu/python/2022/notes/6/#csv): means “comma separated values” and is a python builtin library with many functionalities like: *reader()*, *DictReader()*, *writer()*, *DictWriter()*, *writerow()*.   
+- Sorting list/dict from file or local list/dict is demonstrated in this course.
+- Searching dict by key or value is demonstrated in this course.
+- lambda functions for sorting are demonstrated in this course. The syntax is *lambda parameter_of_lambda_func: return_value_of_lambda_func*.
+- [pillow (PIL)](https://cs50.harvard.edu/python/2022/notes/6/#binary-files-and-pil): is library for image/video processing and binary files. In this course *save()* function is demonstrated.
 
 ### [Problem Set 6](https://cs50.harvard.edu/python/2022/psets/6/)
 - [Lines of Code](https://cs50.harvard.edu/python/2022/psets/6/lines/): 
@@ -143,12 +143,9 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 7: Regular Expressions (regex)](https://cs50.harvard.edu/python/2022/weeks/7/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/7/)
-- validate email from str: interrogate chars, split(), endswith()   
-- re library: search(), sub() [finding and formatting]   
-- regex patterns, multiple flags (VERBOSE explanations)   
-- walrus operator
-- extract username from url [non-capturing group]
-- online tools to create, test, visualize regex (regex101.com, debuggex.com, github_regex-visualizer)   
+- [Regular Expressions](https://cs50.harvard.edu/python/2022/notes/7/#regular-expressions): or “regex” is a pattern to match data for validation / cleaning / creation purposes. Example is validating input from user (email address, password, age etc.). In python there are builtin modules and functions to check regex patterns: *re* with *search()*, *sub()*, *match()*, *fullmatch()* functions to find and format data. More about info in [regex documentation](https://docs.python.org/3/library/re.html) about syntax, special characters, flags, exceptions etc.
+- Walrus operator *:=* assigns a value from right to left and allows us to ask a boolean question at the same time.
+- Online tools to create, test, visualize regex (eg. [regex101.com](https://regex101.com/), [debuggex.com](https://www.debuggex.com/)).
    
 ### [Problem Set 7](https://cs50.harvard.edu/python/2022/psets/7/)
 - [NUMB3RS](https://cs50.harvard.edu/python/2022/psets/7/numb3rs/): 
