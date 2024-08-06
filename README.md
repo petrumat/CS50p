@@ -41,11 +41,11 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 - [Match](https://cs50.harvard.edu/python/2022/notes/1/#match): *match* is used to conditionally run code that matches certain values. Is used in conjunction with *case*. The special case for everything else is *case _:*.
 
 ### [Problem Set 1](https://cs50.harvard.edu/python/2022/psets/1/)
-- [Deep Thought](https://cs50.harvard.edu/python/2022/psets/1/deep/): 
-- [Home Federal Savings Bank](https://cs50.harvard.edu/python/2022/psets/1/bank/): 
-- [File Extensions](https://cs50.harvard.edu/python/2022/psets/1/extensions/): 
-- [Math Interpreter](https://cs50.harvard.edu/python/2022/psets/1/interpreter/): 
-- [Meal Time](https://cs50.harvard.edu/python/2022/psets/1/meal/): 
+- [Deep Thought](https://cs50.harvard.edu/python/2022/psets/1/deep/): a program that answers with "*Yes*" if input is "42", "forty two" or "forty-two" (case-insensitively), otherwise "*No*".
+- [Home Federal Savings Bank](https://cs50.harvard.edu/python/2022/psets/1/bank/): program that outputs different amount of dollars based on user input: starting with "hello" than output "$0", starting with an "h" (but not "hello") than output "$20" (case-insensitively), otherwise output "$100".
+- [File Extensions](https://cs50.harvard.edu/python/2022/psets/1/extensions/): program that prompts the user for the name of a file and then outputs that file’s media type from a list.
+- [Math Interpreter](https://cs50.harvard.edu/python/2022/psets/1/interpreter/): program that interprets input as basic math function with two integer arguments and outputs the result as a floating-point value formatted to one decimal place.
+- [Meal Time](https://cs50.harvard.edu/python/2022/psets/1/meal/): program that converts time, a str in 24-hour format, to the corresponding number of hours as a float and outputs what to eat when.
 
 
 ## [Lecture 2: Loops](https://cs50.harvard.edu/python/2022/weeks/2/)
@@ -59,7 +59,7 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 - [Str concatenation](https://cs50.harvard.edu/python/2022/notes/2/#mario): is a pythonic way to create new strings by looping through current string *N* number of times and concatenating them (with "\*"): *new_str=current_str\*N*.  
 
 ### [Problem Set 2](https://cs50.harvard.edu/python/2022/psets/2/)
-- [camelCase](https://cs50.harvard.edu/python/2022/psets/2/camel/): 
+- [camelCase](https://cs50.harvard.edu/python/2022/psets/2/camel/): a program that prompts the user for the name of a variable in camel case and outputs the corresponding name in snake case.
 - [Coke Machine](https://cs50.harvard.edu/python/2022/psets/2/coke/): 
 - [Just setting up my twttr](https://cs50.harvard.edu/python/2022/psets/2/twttr/): 
 - [Vanity Plates](https://cs50.harvard.edu/python/2022/psets/2/plates/): 
