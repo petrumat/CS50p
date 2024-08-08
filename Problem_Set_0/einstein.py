@@ -2,6 +2,7 @@ def main():
     # Get mass from user
     mass = int(input("m: "))
 
+    # Define the light speed
     light_speed = 300000000
 
     # Calculate energy

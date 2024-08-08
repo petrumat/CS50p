@@ -60,10 +60,10 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 
 ### [Problem Set 2](https://cs50.harvard.edu/python/2022/psets/2/)
 - [camelCase](https://cs50.harvard.edu/python/2022/psets/2/camel/): a program that prompts the user for the name of a variable in camel case and outputs the corresponding name in snake case.
-- [Coke Machine](https://cs50.harvard.edu/python/2022/psets/2/coke/): 
-- [Just setting up my twttr](https://cs50.harvard.edu/python/2022/psets/2/twttr/): 
-- [Vanity Plates](https://cs50.harvard.edu/python/2022/psets/2/plates/): 
-- [Nutrition Facts](https://cs50.harvard.edu/python/2022/psets/2/nutrition/): 
+- [Coke Machine](https://cs50.harvard.edu/python/2022/psets/2/coke/): program that prompts the user to insert a coin, one at a time, each time informing the user of the amount due. Once the user has inputted at least 50 cents, output how many cents in change the user is owed.
+- [Just setting up my twttr](https://cs50.harvard.edu/python/2022/psets/2/twttr/): program that prompts the user for a str of text and then outputs that same text but with all vowels (A, E, I, O, and U) omitted, whether inputted in uppercase or lowercase.
+- [Vanity Plates](https://cs50.harvard.edu/python/2022/psets/2/plates/): program that prompts the user for a vanity plate and then output Valid if meets all of the requirements or Invalid if it does not.
+- [Nutrition Facts](https://cs50.harvard.edu/python/2022/psets/2/nutrition/): program that prompts consumers users to input a fruit (case-insensitively) and then outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits. Ignore any input that isn’t a fruit.
 
 
 ## [Lecture 3: Exceptions](https://cs50.harvard.edu/python/2022/weeks/3/)

@@ -6,7 +6,7 @@ def main():
 
 
 def dollars_to_float(d):
-    # Remove "$" from begining of string
+    # Remove "$" from beginning of string
     dollars = d.lstrip("$")
 
     # Return dollars as float
