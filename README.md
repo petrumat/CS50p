@@ -79,10 +79,10 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - [Raise](https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement): evaluates the first expression as the exception object.
 
 ### [Problem Set 3](https://cs50.harvard.edu/python/2022/psets/3/)
-- [Fuel Gauge](https://cs50.harvard.edu/python/2022/psets/3/fuel/): 
-- [Felipe’s Taqueria](https://cs50.harvard.edu/python/2022/psets/3/taqueria/): 
-- [Grocery List](https://cs50.harvard.edu/python/2022/psets/3/grocery/): 
-- [Outdated](https://cs50.harvard.edu/python/2022/psets/3/outdated/): 
+- [Fuel Gauge](https://cs50.harvard.edu/python/2022/psets/3/fuel/): program that prompts the user for a fraction, formatted as X/Y, wherein each of X and Y is an integer, and then outputs, as a percentage rounded to the nearest integer, how much fuel is in the tank.
+- [Felipe’s Taqueria](https://cs50.harvard.edu/python/2022/psets/3/taqueria/): program that enables a user to place an order, prompting them for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). After each inputted item, display the total cost of all items inputted thus far, prefixed with a dollar sign ($) and formatted to two decimal places. Treat the user’s input case insensitively. Ignore any input that isn’t an item. Assume that every item on the menu will be titlecased.
+- [Grocery List](https://cs50.harvard.edu/python/2022/psets/3/grocery/): program that prompts the user for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). Then output the user’s grocery list in all uppercase, sorted alphabetically by item, prefixing each line with the number of times the user inputted that item. No need to pluralize the items. Treat the user’s input case-insensitively.
+- [Outdated](https://cs50.harvard.edu/python/2022/psets/3/outdated/): program that prompts the user for a date, anno Domini, in month-day-year order, formatted like 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in a predetermined list. Then output that same date in YYYY-MM-DD format. If the user’s input is not a valid date in either format, prompt the user again.
 
 
 ## [Lecture 4: Libraries](https://cs50.harvard.edu/python/2022/weeks/4/)
