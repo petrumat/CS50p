@@ -99,12 +99,12 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - ANSI color escape codes: are used to show terminal output more clearly.
 
 ### [Problem Set 4](https://cs50.harvard.edu/python/2022/psets/4/)
-- [Emojize](https://cs50.harvard.edu/python/2022/psets/4/emojize/): 
-- [Frank, Ian and Glen’s Letters](https://cs50.harvard.edu/python/2022/psets/4/figlet/): 
-- [Adieu, Adieu](https://cs50.harvard.edu/python/2022/psets/4/adieu/): 
-- [Guessing Game](https://cs50.harvard.edu/python/2022/psets/4/game/): 
-- [Little Professor](https://cs50.harvard.edu/python/2022/psets/4/professor/): 
-- [Bitcoin Price Index](https://cs50.harvard.edu/python/2022/psets/4/bitcoin/): 
+- [Emojize](https://cs50.harvard.edu/python/2022/psets/4/emojize/): program that prompts the user for a str in English and then outputs the “emojized” version of that str, converting any codes (or aliases) therein to their corresponding emoji. 
+- [Frank, Ian and Glen’s Letters](https://cs50.harvard.edu/python/2022/psets/4/figlet/): program that expects zero or two command-line arguments (zero if the user would like to output text in a random font or two if the user would like to output text in a specific font, in which case the first of the two should be *-f* or *--font*, and the second of the two should be the name of the font), prompts the user for a str of text or outputs that text in the desired font. If the user provides two command-line arguments and the first is not *-f* or *--font* or the second is not the name of a font, the program should exit via *sys.exit* with an error message.
+- [Adieu, Adieu](https://cs50.harvard.edu/python/2022/psets/4/adieu/):  program that prompts the user for names, one per line, until the user inputs control-d. Assume that the user will input at least one name. Then bid adieu to those names, separating two names with one *and*, three names with two commas and one *and*, and *n* names with *n-1* commas and one *and*.
+- [Guessing Game](https://cs50.harvard.edu/python/2022/psets/4/game/): program that prompts the user for a level, *n*. If the user does not input a positive integer, the program should prompt again; randomly generates an integer between 1 and *n*, inclusive, using the *random* module; prompts the user to guess that integer. If the guess is not a positive integer, the program should prompt the user again. If the guess is smaller than that integer, the program should output *Too small!* and prompt the user again. If the guess is larger than that integer, the program should output *Too large!* and prompt the user again. If the guess is the same as that integer, the program should output *Just right!* and exit.
+- [Little Professor](https://cs50.harvard.edu/python/2022/psets/4/professor/): program that prompts the user for a level, *n*. If the user does not input *1*, *2*, or *3*, the program should prompt again; randomly generates ten (10) math problems formatted as *X + Y =*, wherein each of *X* and *Y* is a non-negative integer with *n* digits. No need to support operations other than addition (*+*); prompts the user to solve each of those problems. If an answer is not correct (or not even a number), the program should output *EEE* and prompt the user again, allowing the user up to three tries in total for that problem. If the user has still not answered correctly after three tries, the program should output the correct answer; the program should ultimately output the user’s score: the number of correct answers out of 10.
+- [Bitcoin Price Index](https://cs50.harvard.edu/python/2022/psets/4/bitcoin/): program that expects the user to specify as a command-line argument the number of Bitcoins, *n*, that they would like to buy. If that argument cannot be converted to a *float*, the program should exit via *sys.exit* with an error message; queries the API for the CoinDesk Bitcoin Price Index at https://api.coindesk.com/v1/bpi/currentprice.json, which returns a JSON object, among whose nested keys is the current price of Bitcoin as a *float*; Outputs the current cost of *n* Bitcoins in USD to four decimal places, using *,* as a thousands separator.
 
 
 ## [Lecture 5: Unit Tests](https://cs50.harvard.edu/python/2022/weeks/5/)
@@ -115,10 +115,10 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - [pytest](https://cs50.harvard.edu/python/2022/notes/5/#pytest): is a third-party library that allows you to unit test your program. Learn more in [Pytest’s documentation](https://docs.pytest.org/en/7.1.x/getting-started.html). It is possible to group testing files in folders, but a file named "__init__.py" is necessary to tell python this is a package.
 
 ### [Problem Set 5](https://cs50.harvard.edu/python/2022/psets/5/)
-- [Testing my twttr](https://cs50.harvard.edu/python/2022/psets/5/test_twttr/): 
-- [Back to the Bank](https://cs50.harvard.edu/python/2022/psets/5/test_bank/): 
-- [Re-requesting a Vanity Plate](https://cs50.harvard.edu/python/2022/psets/5/test_plates/): 
-- [Refueling](https://cs50.harvard.edu/python/2022/psets/5/test_fuel/): 
+- [Testing my twttr](https://cs50.harvard.edu/python/2022/psets/5/test_twttr/): program that reimplements [Setting up my twttr](https://cs50.harvard.edu/python/2022/psets/2/twttr/) from Problem Set 2, restructuring the code as described. Implement one or more functions that collectively test your implementation of *shorten* function thoroughly.
+- [Back to the Bank](https://cs50.harvard.edu/python/2022/psets/5/test_bank/): program that reimplements [Home Federal Savings Bank](https://cs50.harvard.edu/python/2022/psets/1/bank/) from Problem Set 1, restructuring the code as described. Implement three or more functions that collectively test your implementation of *value* function thoroughly.
+- [Re-requesting a Vanity Plate](https://cs50.harvard.edu/python/2022/psets/5/test_plates/): program that reimplements [Vanity Plates](https://cs50.harvard.edu/python/2022/psets/2/plates/) from Problem Set 2, restructuring the code as described. Implement four or more functions that collectively test your implementation of *is_valid* function thoroughly.
+- [Refueling](https://cs50.harvard.edu/python/2022/psets/5/test_fuel/): program that reimplements [Fuel Gauge](https://cs50.harvard.edu/python/2022/psets/3/fuel/) from Problem Set 3, restructuring the code as described. Implement two or more functions that collectively test your implementations of *convert* and *gauge* functions thoroughly.
 
 
 ## [Lecture 6: File I/O](https://cs50.harvard.edu/python/2022/weeks/6/)
@@ -134,10 +134,10 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - [pillow (PIL)](https://cs50.harvard.edu/python/2022/notes/6/#binary-files-and-pil): is library for image/video processing and binary files. In this course *save()* function is demonstrated.
 
 ### [Problem Set 6](https://cs50.harvard.edu/python/2022/psets/6/)
-- [Lines of Code](https://cs50.harvard.edu/python/2022/psets/6/lines/): 
-- [Pizza Py](https://cs50.harvard.edu/python/2022/psets/6/pizza/): 
-- [Scourgify](https://cs50.harvard.edu/python/2022/psets/6/scourgify/): 
-- [CS50 P-Shirt](https://cs50.harvard.edu/python/2022/psets/6/shirt/): 
+- [Lines of Code](https://cs50.harvard.edu/python/2022/psets/6/lines/): program that expects exactly one command-line argument, the name (or path) of a Python file, and outputs the number of lines of code in that file, excluding comments and blank lines. If the user does not specify exactly one command-line argument, or if the specified file’s name does not end in *.py*, or if the specified file does not exist, the program should instead exit via *sys.exit*.
+- [Pizza Py](https://cs50.harvard.edu/python/2022/psets/6/pizza/): program that expects exactly one command-line argument, the name (or path) of a CSV file in Pinocchio’s format, and outputs a table formatted as ASCII art using *tabulate*, a package on PyPI at https://pypi.org/project/tabulate. Format the table using the library’s *grid* format. If the user does not specify exactly one command-line argument, or if the specified file’s name does not end in *.csv*, or if the specified file does not exist, the program should instead exit via *sys.exit*.
+- [Scourgify](https://cs50.harvard.edu/python/2022/psets/6/scourgify/): program that expects the user to provide two command-line arguments (the name of an existing CSV file to read as input, whose columns are assumed to be, in order, *name* and *house*, and the name of a new CSV to write as output, whose columns should be, in order, *first*, *last*, and *house*); converts that input to that output, splitting each *name* into a *first* name and *last* name. Assume that each student will have both a first name and last name. If the user does not provide exactly two command-line arguments, or if the first cannot be read, the program should exit via *sys.exit* with an error message.
+- [CS50 P-Shirt](https://cs50.harvard.edu/python/2022/psets/6/shirt/): program that expects exactly two command-line arguments: in *sys.argv[1]*, the name (or path) of a JPEG or PNG to read (i.e., open) as input; in *sys.argv[2]*, the name (or path) of a JPEG or PNG to write (i.e., save) as output. The program should then overlay shirt.png (which has a transparent background) on the input after resizing and cropping the input to be the same size, saving the result as its output.
 
 
 ## [Lecture 7: Regular Expressions (regex)](https://cs50.harvard.edu/python/2022/weeks/7/)
@@ -148,11 +148,11 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - Online tools to create, test, visualize regex (eg. [regex101.com](https://regex101.com/), [debuggex.com](https://www.debuggex.com/)).
    
 ### [Problem Set 7](https://cs50.harvard.edu/python/2022/psets/7/)
-- [NUMB3RS](https://cs50.harvard.edu/python/2022/psets/7/numb3rs/): 
-- [Watch on YouTube](https://cs50.harvard.edu/python/2022/psets/7/watch/): 
-- [Working 9 to 5](https://cs50.harvard.edu/python/2022/psets/7/working/): 
-- [Regular, um, Expressions](https://cs50.harvard.edu/python/2022/psets/7/um/): 
-- [Response Validation](https://cs50.harvard.edu/python/2022/psets/7/response/): 
+- [NUMB3RS](https://cs50.harvard.edu/python/2022/psets/7/numb3rs/): function called *validate* that expects an IPv4 address as input as a *str* and then returns *True* or *False*, respectively, if that input is a valid IPv4 address or not.
+- [Watch on YouTube](https://cs50.harvard.edu/python/2022/psets/7/watch/): function called *parse* that expects a *str* of HTML as input, extracts any YouTube URL that’s the value of a *src* attribute of an *iframe* element therein, and returns its shorter, shareable *youtu.be* equivalent as a *str*. Expect that any such URL will be in one of the formats below. Assume that the value of *src* will be surrounded by double quotes. And assume that the input will contain no more than one such URL. If the input does not contain any such URL at all, return *None*.
+- [Working 9 to 5](https://cs50.harvard.edu/python/2022/psets/7/working/): function called *convert* that expects a *str* in any of the 12-hour formats below and returns the corresponding *str* in 24-hour format (i.e., *9:00 to 17:00*). Expect that *AM* and *PM* will be capitalized (with no periods therein) and that there will be a space before each. Assume that these times are representative of actual times, not necessarily 9:00 AM and 5:00 PM specifically. Raise a *ValueError* instead if the input to *convert* is not in either of those formats or if either time is invalid (e.g., *12:60 AM*, *13:00 PM*, etc.). But do not assume that someone’s hours will start ante meridiem and end post meridiem; someone might work late and even long hours (e.g., *5:00 PM to 9:00 AM*).
+- [Regular, um, Expressions](https://cs50.harvard.edu/python/2022/psets/7/um/): function called *count* that expects a line of text as input as a *str* and returns, as an *int*, the number of times that “um” appears in that text, case-insensitively, as a word unto itself, not as a substring of some other word. For instance, given text like *hello, um, world*, the function should return *1*. Given text like *yummy*, though, the function should return *0*.
+- [Response Validation](https://cs50.harvard.edu/python/2022/psets/7/response/): program that prompts the user for an email address via *input* and then prints *Valid* or *Invalid*, respectively, if the input is a syntactically valid email address. You may not use *re*. And do not validate whether the email address’s domain name actually exists.
 
 
 ## [Lecture 8: Object-Oriented Programming](https://cs50.harvard.edu/python/2022/weeks/8/)
@@ -169,9 +169,9 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - inheritance, superclasses, super()   
 
 ### [Problem Set 8](https://cs50.harvard.edu/python/2022/psets/8/)
-- [Seasons of Love](https://cs50.harvard.edu/python/2022/psets/8/seasons/): 
-- [Cookie Jar](https://cs50.harvard.edu/python/2022/psets/8/jar/): 
-- [CS50 Shirtificate](https://cs50.harvard.edu/python/2022/psets/8/shirtificate/): 
+- [Seasons of Love](https://cs50.harvard.edu/python/2022/psets/8/seasons/): program that prompts the user for their date of birth in *YYYY-MM-DD* format and then sings prints how old they are in minutes, rounded to the nearest integer, using English words instead of numerals, without any and between words. Since a user might not know the time at which they were born, assume, for simplicity, that the user was born at midnight (i.e., 00:00:00) on that date. And assume that the current time is also midnight. In other words, even if the user runs the program at noon, assume that it’s actually midnight, on the same date.
+- [Cookie Jar](https://cs50.harvard.edu/python/2022/psets/8/jar/): implement a *class* called *Jar* with these methods: __init__ should initialize a cookie jar with the given *capacity*, which represents the maximum number of cookies that can fit in the cookie jar. If *capacity* is not a non-negative *int*, though, __init__ should instead raise a *ValueError*; __str__ should return a *str* with *n* 🍪, where *n* is the number of cookies in the cookie jar; *deposit* should add *n* cookies to the cookie jar. If adding that many would exceed the cookie jar’s capacity, though, *deposit* should instead raise a *ValueError*; *withdraw* should remove *n* cookies from the cookie jar. If there aren’t that many cookies in the cookie jar, though, *withdraw* should instead raise a *ValueError*; *capacity* should return the cookie jar’s capacity; *size* should return the number of cookies actually in the cookie jar, initially *0*. Additionally implement four or more functions that collectively test your implementation of Jar class thoroughly.
+- [CS50 Shirtificate](https://cs50.harvard.edu/python/2022/psets/8/shirtificate/): program that prompts the user for their name and outputs, using [fpdf2](https://pypi.org/project/fpdf2/), a CS50 shirtificate in a file called *shirtificate.pdf*, with these specifications: the orientation of the PDF should be Portrait; the format of the PDF should be A4, which is 210mm wide by 297mm tall; the top of the PDF should say “CS50 Shirtificate” as text, centered horizontally; the shirt’s image should be centered horizontally and the user’s name should be on top of the shirt, in white text.
 
 
 ## [Lecture 9: Et Cetera](https://cs50.harvard.edu/python/2022/weeks/9/)
