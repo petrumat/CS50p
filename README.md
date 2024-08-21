@@ -7,6 +7,15 @@ Python Package Index documentation: https://pypi.org/
 Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a7f0cc8   
 
 
+# Virtual Environment
+
+Working with an environment for this course is highly recommended to keep workspace organized. For ease of understanding use the following commands (applicable on Windows OS; for Unix / macOS refer to [docs.python.org/../venv](https://docs.python.org/3/library/venv.html)) in your root folder (e.g. c:\path\to\CS50p\directory):
+- *python -m venv .venv* to create virtual environment
+- *.venv\Scripts\activate* to activate virtual environment
+- *pip install -r requirements.txt* to recreate the virtual environment
+- *pur -r .\requirements.txt* (**optional**) to update all requirements to latest versions
+
+
 # Lectures
 
 ## [Lecture 0: Functions, Variables](https://cs50.harvard.edu/python/2022/weeks/0/)
