@@ -18,6 +18,18 @@ Working with an environment for this course is highly recommended to keep worksp
 - *pip freeze > requirements.txt* (**optional**) to update requirements.txt file if you install any other python package to your virtual environment.
 
 
+# Problem Sets
+
+## Necessities
+Before every problem log into [cs50.dev](https://cs50.dev/), click on your terminal window, and execute *cd* by itself. You should find that your terminal window’s prompt resembles *$* symbol. After this, execute *mkdir 'directory|problem_name'* to create a folder with that name. Then execute *cd 'directory|problem_name'* to change directories into that folder. Finally execute *code 'directory|problem_name.py'* to create a python executable file with that name.
+
+## Walk-around
+I created a python executable named *before_psets.py directory|problem_name* that automatically creates directory and file with passed command-line argument as the name. If folder already exists or command-line argument is missing, program exits with error message. The created file is populated with a main() function template. This executable should be placed in root folder in your [cs50.dev](https://cs50.dev/).
+
+## Disclaimer
+Now you're ready to create **your personal** solution to problem sets, validate functionality with *check50* and *submit50* commands. Keeping in mind the course's policy on academic honesty. This repository is **my personal** interpretation and I made it public to help anyone in need with ideas. All that said, have fun coding!
+
+
 # Lectures
 
 ## [Lecture 0: Functions, Variables](https://cs50.harvard.edu/python/2022/weeks/0/)
