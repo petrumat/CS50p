@@ -10,10 +10,12 @@ Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a
 # Virtual Environment
 
 Working with an environment for this course is highly recommended to keep workspace organized. For ease of understanding use the following commands (applicable on Windows OS; for Unix / macOS refer to [docs.python.org/../venv](https://docs.python.org/3/library/venv.html)) in your root folder (e.g. c:\path\to\CS50p\directory):
-- *python -m venv .venv* to create virtual environment
-- *.venv\Scripts\activate* to activate virtual environment
-- *pip install -r requirements.txt* to recreate the virtual environment
-- *pur -r .\requirements.txt* (**optional**) to update all requirements to latest versions
+- *python.exe -m pip install --upgrade pip* (**optional**) to update pip to latest version.
+- *python -m venv .venv* to create virtual environment.
+- *.venv\Scripts\activate* to activate virtual environment.
+- *pip install -r requirements.txt* to recreate the virtual environment.
+- *pur -r .\requirements.txt* (**optional**) to update all requirements to latest versions.
+- *pip freeze > requirements.txt* (**optional**) to update requirements.txt file if you install any other python package to your virtual environment.
 
 
 # Lectures
