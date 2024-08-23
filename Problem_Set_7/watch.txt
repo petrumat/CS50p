@@ -1,0 +1,17 @@
+# Explanations for pattern
+
+pattern = r'^<iframe[\w\s=":/\.;-]*src="https?://(www\.)?youtube\.com/embed/([^ ]+)"[\w\s=":/\.;-]*></iframe>$'
+
+pattern = r"""
+    ^<iframe            # begins with '<iframe'
+    [\w\s=":/\.;-]*     # zero or any chars from list (ASCII chars, whitespace or [=":/\.;-] inclusive)
+    src="http           # exactly one 'src="http'
+    s?                  # zero or one 's'
+    ://                 # exactly one '://'
+    (www\.)?            # group(1) zero or one 'www\.'
+    youtube\.com/embed/ # exactly one 'youtube\.com/embed/'
+    ([^ ]+)             # group(2) resulting substring
+    "                   # zero or one '"'
+    [\w\s=":/\.;-]*     # zero or any chars from list (ASCII chars, whitespace or [=":/\.;-] inclusive)
+    ></iframe>$         # ends with '></iframe>'
+    """

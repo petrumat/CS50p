@@ -1,0 +1,33 @@
+# Explanations for pattern
+
+pattern = r'^(((1?[0-9]?[0-9])|(2[0-4][0-9])|(25[0-5]))\\.){3}((1?[0-9]?[0-9])|(2[0-4][0-9])|(25[0-5])){1}$'
+
+pattern = r"""
+    ^                   # start of pattern
+    (                   # group(1)
+        (               # group(2)
+            (           # group(3)
+                1?      # zero or one '1' digit
+                [0-9]?  # zero or one digit from ['0' .. '9'] inclusive
+                [0-9]   # exactly one digit from ['0' .. '9'] inclusive
+                        # covers everything from '0' to '199'
+            )|(         # end of group(3); group(4)
+                2       # exactly one '2' digit
+                [0-4]   # exactly one digit from ['0' .. '4'] inclusive
+                [0-9]   # exactly one digit from ['0' .. '9'] inclusive
+                        # covers everything from '200' to '249'
+            )|(         # end of group(4); group(5)
+                25      # exactly one '25'
+                [0-5]   # exactly one digit from ['0' .. '5'] inclusive
+                        # covers everything from '250' to '255'
+            )           # end of group(5);
+        )\\.            # end of group(2); ends with exactly one '.'
+    ){3}                # end of group(1) matching exactly three times
+                        # covers everything from '0.0.0.' to '255.255.255.'
+    (                   # group(6)
+        (1?[0-9]?[0-9]) # group(7) covers everything from '0' to '199'
+        |(2[0-4][0-9])  # group(8) covers everything from '200' to '249'
+        |(25[0-5])      # group(9) covers everything from '250' to '255'
+    ){1}                # end of group(6) matching exactly one time (difference is not ending with '.')
+    $                   # end of pattern
+    """

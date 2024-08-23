@@ -1,0 +1,29 @@
+# Explanations for pattern
+
+pattern = r'^((0?[1-9]|1[0-2])(:[0-5][0-9])? (AM|PM)) to ((0?[1-9]|1[0-2])(:[0-5][0-9])? (AM|PM))$'
+
+pattern = r"""
+    ^                   # start of pattern
+    (                   # group(1)
+        (               # group(2)
+            0?          # zero or one '0'
+            [1-9]       # exactly one digit from ['1' .. '9'] inclusive
+            |           # the OR operator
+            1           # exactly one '1'
+            [0-2]       # exactly one digit from ['0', '1', '2'] inclusive
+        )(              # end of group(2); group(3)
+            :           # exactly one ':'
+            [0-5]       # exactly one digit from ['0' .. '5'] inclusive
+            [0-9]       # exactly one digit from ['0' .. '9'] inclusive
+        )?              # zero or one group(3)
+                        # exactly one whitespace ' '
+        (AM|PM)         # group(4); either 'AM' OR 'PM'
+    )                   # end of group(1)
+     to                 # exactly one ' to '
+    (                   # group(5) {identical to group(1)}
+        (0?[1-9]|1[0-2])# group(6) covers from '00' to '12'
+        (:[0-5][0-9])?  # group(7) covers '' and from ':00' to ':59'
+        (AM|PM)         # group(8) covers either 'AM' OR 'PM'
+    )                   # end of group(5)
+    $                   # end of pattern
+    """
