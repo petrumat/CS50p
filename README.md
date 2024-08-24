@@ -181,10 +181,18 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 8: Object-Oriented Programming](https://cs50.harvard.edu/python/2022/weeks/8/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/8/)
-- python's programming paradigms: procedural (execute code step by step), functional (powerful functions + lambda), OOP (abstraction, classes, encapsulation, methods, overloading, inheritance etc.)   
-- tuples, defensive programming, TypeError   
-- classes, "..." to skip, attributes ("." syntax), objects   
-- correctness of data, validation, error raising    
+- Python's programming paradigms (coding patterns):
+ - **procedural programming**: execute code step by step or specifies the steps a program must take to reach a desired state. Examples: *Pascal*, *C*, *C++*, *Java*.
+ - **functional programming**: treats programs as evaluating mathematical functions and avoids state and mutable data. Based on powerful functions and lambda. Examples: *Lisp*, *Haskell*, *Python*.
+ - **[OOP](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)**: organizes programs around data/objects. Based on abstraction (means hiding the implementation), classes, encapsulation, methods, overloading, inheritance etc. Examples: *Python*, *Java*, *C++*, *C#*, *Ruby*.
+ - **imperative programming**: software development paradigm where Functions are implicitly coded in every step required to solve a problem. Examples: *Pascal*, *C*, *C++*, *Java*.
+ - **declarative programming**: focuses on the logic of computation neglecting the control flow. Examples: *SQL*, *QML*.
+ - **structured programming**: a kind of imperative programming focusing on modular programming. Examples: *C*, *C++*, *C#*, *Ruby*, *Pearl*.
+- *tuples* are a sequence of values. Compared to *list*, *tuple* is immutable (can't be modified). Advantage is programming defensively. If you try to change tuple's values, than *TypeError* is raised.  
+- [Classes](https://cs50.harvard.edu/python/2022/notes/8/#classes): like a blueprint for objects. Classes invent data types. [Classes' documentation](https://docs.python.org/3/tutorial/classes.html) For simplicity, python offers "..." which means that code will be finished later (like *pass* for functions). Classes have attributes (variables that allow values to be specified inside them) which accessing syntax is ".". Attributes can be any data type (str, int, float, list, tuple, dict, other). To use a class create objects with all functionalities, a name and exists in computer's memory. Objects are instantiations of that class. OOP encourages you to encapsulate all the functionality of a class within the class definition. By default, classes are mutable, but can be protected in code.
+- Data correctness is possible by standardizing attribute value. Check values in *constructor* method. *Methods* are classes functions that behave in special ways (examples: *constructor*, *setter*, *getter*). The *constructor* is defined by instance method "__init__" which initialize classes attributes. Syntax "__" is called "dunder" (double "under"). Many methods refers to the current object *self* that called them. *Self* is strictly used inside classes and not in other functions with which objects interact. Another convention is "__init__" must use same names of attributes as the parameters calling it.       , validation, error raising
+
+
 - instance variables + private "'_'var_name" convention (honor system)   
 - instance methods [self]: __init__ = initializer, @property = getter, @attribute_name.setter = setter, __str__ = print method, __add__ = operator overloading   
 - class methods (similar to Singleton) [cls]: @classmethod   
