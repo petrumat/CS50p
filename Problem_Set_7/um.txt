@@ -1,0 +1,10 @@
+# Explanations for pattern
+
+pattern = r'\b(um|Um|uM|UM)\b'
+
+pattern = r"""
+    \b                  # matches empty string at beginning of group(1)
+    (                   # group(1)
+        um|Um|uM|UM     # exactly one 'um' OR 'Um' OR 'uM' OR 'UM'
+    )                   # end of group(1)
+    \b                  # matches empty string at end of group(1)
