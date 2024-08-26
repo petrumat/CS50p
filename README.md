@@ -182,22 +182,23 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/8/)
 - Python's programming paradigms (coding patterns):
- - **procedural programming**: execute code step by step or specifies the steps a program must take to reach a desired state. Examples: *Pascal*, *C*, *C++*, *Java*.
- - **functional programming**: treats programs as evaluating mathematical functions and avoids state and mutable data. Based on powerful functions and lambda. Examples: *Lisp*, *Haskell*, *Python*.
- - **[OOP](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)**: organizes programs around data/objects. Based on abstraction (means hiding the implementation), classes, encapsulation, methods, overloading, inheritance etc. Examples: *Python*, *Java*, *C++*, *C#*, *Ruby*.
- - **imperative programming**: software development paradigm where Functions are implicitly coded in every step required to solve a problem. Examples: *Pascal*, *C*, *C++*, *Java*.
- - **declarative programming**: focuses on the logic of computation neglecting the control flow. Examples: *SQL*, *QML*.
- - **structured programming**: a kind of imperative programming focusing on modular programming. Examples: *C*, *C++*, *C#*, *Ruby*, *Pearl*.
+  - **procedural programming**: execute code step by step or specifies the steps a program must take to reach a desired state. Examples: *Pascal*, *C*, *C++*, *Java*.
+  - **functional programming**: treats programs as evaluating mathematical functions and avoids state and mutable data. Based on powerful functions and lambda. Examples: *Lisp*, *Haskell*, *Python*.
+  - **[OOP](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)**: organizes programs around data/objects. Based on abstraction (means hiding the implementation), classes, encapsulation, methods, overloading, inheritance etc. Examples: *Python*, *Java*, *C++*, *C#*, *Ruby*.
+  - **imperative programming**: software development paradigm where Functions are implicitly coded in every step required to solve a problem. Examples: *Pascal*, *C*, *C++*, *Java*.
+  - **declarative programming**: focuses on the logic of computation neglecting the control flow. Examples: *SQL*, *QML*.
+  - **structured programming**: a kind of imperative programming focusing on modular programming. Examples: *C*, *C++*, *C#*, *Ruby*, *Pearl*.
 - *tuples* are a sequence of values. Compared to *list*, *tuple* is immutable (can't be modified). Advantage is programming defensively. If you try to change tuple's values, than *TypeError* is raised.  
 - [Classes](https://cs50.harvard.edu/python/2022/notes/8/#classes): like a blueprint for objects. Classes invent data types. [Classes' documentation](https://docs.python.org/3/tutorial/classes.html) For simplicity, python offers "..." which means that code will be finished later (like *pass* for functions). Classes have attributes (variables that allow values to be specified inside them) which accessing syntax is ".". Attributes can be any data type (str, int, float, list, tuple, dict, other). To use a class create objects with all functionalities, a name and exists in computer's memory. Objects are instantiations of that class. OOP encourages you to encapsulate all the functionality of a class within the class definition. By default, classes are mutable, but can be protected in code.
-- Data correctness is possible by standardizing attribute value. Check values in *constructor* method. *Methods* are classes functions that behave in special ways (examples: *constructor*, *setter*, *getter*). The *constructor* is defined by instance method "__init__" which initialize classes attributes. Syntax "__" is called "dunder" (double "under"). Many methods refers to the current object *self* that called them. *Self* is strictly used inside classes and not in other functions with which objects interact. Another convention is "__init__" must use same names of attributes as the parameters calling it.       , validation, error raising
-
-
-- instance variables + private "'_'var_name" convention (honor system)   
-- instance methods [self]: __init__ = initializer, @property = getter, @attribute_name.setter = setter, __str__ = print method, __add__ = operator overloading   
-- class methods (similar to Singleton) [cls]: @classmethod   
-- class variables (shared by all functionality of the class)   
-- inheritance, superclasses, super()   
+- Data correctness is possible by standardizing attribute value. Check values in *constructor* method. *Methods* are classes functions that behave in special ways (examples: *constructor*, *setter*, *getter*). The *constructor* is defined by instance method *def \__init__(self,...)* which initialize classes attributes. Syntax "\__" is called "dunder" (double "under"). Many methods refers to the current object *self* that called them. *Self* is strictly used inside classes and not in other functions with which objects interact. Another convention is *\__init__* must use same names of attributes as the parameters calling it. Data validation is addressed by raising errors. This will stop and clean the program. Also, values are checked first and than assigned to object's attributes, compared to dictionaries where values go in no matter what. This provides control over value correctness.
+- To print/get values of object attributes, python has *def \__str__(self)* method that has only one argument *self* and returns 'str' type.
+- Property of a class is an feature that prevents programmers to change values of attributes to ensure more control. Properties are defined using function '[decorators](https://cs50.harvard.edu/python/2022/notes/8/#decorators)', which begin with *@*. These modify the behavior of that function. Examples: *@property* defines how some attribute of our class should be set and retrieved. This said, classes can have methods for *getter* (accepts only one argument *self* and is specified with *@property*) and *setter* (accepts two arguments *self*, *actual_value* and is specified wit *@attribute.setter*). These are always called and prevent users to access attributes directly. Attributes and functions with same name will collide, so the convention is to prefix attribute with '\_'. This is not used in *\__init__* because we want python to call getter and setter and not the attribute itself, maintaining error checking and correctness. That means a user can change the instance variable by just addressing it with '_' because python doesn't provide the level of protection like Java using special mechanisms (like private, public, protected etc.). Python implements the *honor* system, not *visibility* system like Java.
+- [Examples](https://cs50.harvard.edu/python/2022/notes/8/#connecting-to-previous-work-in-this-course) of classes implemented in python: int, str, list, dict, other.
+- Example of instance methods [self]: *\__init__* => initializer, *@property* => getter, *@attribute_name.setter* => setter, *\__str__* => print method, *\__add__* => operator overloading.
+- [Class methods](https://cs50.harvard.edu/python/2022/notes/8/#class-methods) [cls]: associates functions with the class itself, not the object. In other words, it is not relevant to have multiple objects with that function, only one. No need to instantiate an object, so no *\__init__* method required. *self* is replaced with *cls* and *@classmethod* is specified to create an object by calling that method without the object in first place.
+- Besides instance methods and class methods, python offers other types of methods like *@[staticmethod](https://cs50.harvard.edu/python/2022/notes/8/#static-methodsC)*.
+- [Inheritance](https://cs50.harvard.edu/python/2022/notes/8/#inheritance): feature of OOP where a class “inherits” methods, variables, and attributes from another class (named superclass). To define *child* class that inherits *parent* class use syntax *class Child(Parent)*. To use methods/variables call *super().\__init__(...)* that runs *\__init__* method of *parent*. Example of class inheritance is [exception-hierarchy](https://docs.python.org/3/library/exceptions.html#exception-hierarchy).
+- [Operator Overloading](https://cs50.harvard.edu/python/2022/notes/8/#operator-overloading): some operators can be “overloaded” such that they can have more abilities beyond simple arithmetic. *def \__add__(self, other)* method allows for defining addition of values from user created data types like instances of classes. In this case *self* is what is on the left of the '+' operand and *other* is what is right of the '+'.
 
 ### [Problem Set 8](https://cs50.harvard.edu/python/2022/psets/8/)
 - [Seasons of Love](https://cs50.harvard.edu/python/2022/psets/8/seasons/): program that prompts the user for their date of birth in *YYYY-MM-DD* format and then sings prints how old they are in minutes, rounded to the nearest integer, using English words instead of numerals, without any and between words. Since a user might not know the time at which they were born, assume, for simplicity, that the user was born at midnight (i.e., 00:00:00) on that date. And assume that the current time is also midnight. In other words, even if the user runs the program at noon, assume that it’s actually midnight, on the same date.
@@ -208,17 +209,17 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 ## [Lecture 9: Et Cetera](https://cs50.harvard.edu/python/2022/weeks/9/)
 
 ### [Concepts](https://cs50.harvard.edu/python/2022/notes/9/)
-- data type -> set   
-- global variables, Unbound Local Error   
-- constant variables (more like honor system)   
-- dynamically typed engine (vs. strongly typed), type hints, mypy, "var: type", "func() -> return_type"   
-- document strings, comments conventions, restructured text   
-- sys.argv, '\-initial', '\-\-word', argparse library   
-- unpacking and operators: '\*', '\*\*', named parameters, variable number of arguments: '\*args', '\*\*kwargs'   
+- data type -> set
+- global variables, Unbound Local Error
+- constant variables (more like honor system)
+- dynamically typed engine (vs. strongly typed), type hints, mypy, "var: type", "func() -> return_type"
+- document strings, comments conventions, restructured text
+- sys.argv, '\-initial', '\-\-word', argparse library
+- unpacking and operators: '\*', '\*\*', named parameters, variable number of arguments: '\*args', '\*\*kwargs'
 - programming models (procedural, OOP, functional): map(), filter   
-- list comprehension, dictionary comprehension   
-- enumerate   
-- generate, yield statement   
+- list comprehension, dictionary comprehension
+- enumerate
+- generate, yield statement
 - text-to-speech pyttsx4
 
 ### [Final Project](https://cs50.harvard.edu/python/2022/project/)
