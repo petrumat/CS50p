@@ -1,15 +1,20 @@
 # CS50's Introduction to Programming with Python
 
 Official course link: https://cs50.harvard.edu/python/2022/   
-CS50p YouTube playlist: https://www.youtube.com/watch?v=OvKCESUCWII&list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V&pp=iAQB   
+CS50P YouTube playlist: https://www.youtube.com/watch?v=OvKCESUCWII&list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V&pp=iAQB   
 Python documentations: https://docs.python.org/3/   
 Python Package Index documentation: https://pypi.org/   
-Personal CS50p ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a7f0cc8   
+Personal CS50P ChatGPT: https://chat.openai.com/c/68fb62eb-bddc-47ee-b7b8-cf9f0a7f0cc8   
+CS50P Gradebook: https://cs50.me/cs50p
+
+
+# CS50P Certificate
+![Certificate](Certificate/CS50P_Certificate_A4.png)
 
 
 # Virtual Environment
 
-Working with an environment for this course is highly recommended to keep workspace organized. For ease of understanding use the following commands (applicable on Windows OS; for Unix / macOS refer to [docs.python.org/../venv](https://docs.python.org/3/library/venv.html)) in your root folder (e.g. c:\path\to\CS50p\directory):
+Working with an environment for this course is highly recommended to keep workspace organized. For ease of understanding use the following commands (applicable on Windows OS; for Unix / macOS refer to [docs.python.org/../venv](https://docs.python.org/3/library/venv.html)) in your root folder (e.g. c:\path\to\CS50P\directory):
 - *python.exe -m pip install --upgrade pip* (**optional**) to update pip to latest version.
 - *python -m venv .venv* to create virtual environment.
 - *.venv\Scripts\activate* to activate virtual environment.
