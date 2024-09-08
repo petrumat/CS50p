@@ -226,3 +226,5 @@ are things that go wrong within our code. For example: *SyntaxError* are those t
 - TTS (text-to-speech) pyttsx4 module is demonstrated in this course.
 
 ### [Final Project](https://cs50.harvard.edu/python/2022/project/)
+- The final project is an interactive trivia quiz game with a graphical user interface. Players can select the category, number of questions, and difficulty level. The trivia questions are sourced from the Open Trivia Database and presented with multiple-choice options and graphic elements for an enhanced experience.
+- More details about functionalities, implementation and testing are found in *Project/README.md* and *Project/presentation.ppsx* files.

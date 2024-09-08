@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
+from string import punctuation
 import requests, random, html, os
 
 
@@ -41,54 +42,6 @@ def main() -> None:
     root.title("Quiz Game")
     welcome_window(root)  # Show the category selection window
     root.mainloop()
-
-
-def fetch_questions(amount: int = 5, category_id: int = 9, difficulty: str = 'medium') -> list[dict] | None:
-    """
-    Fetch trivia questions from the Open Trivia Database.
-
-    Args:
-        amount (int): Number of questions to fetch.
-        category_id (int): Category ID for the questions.
-        difficulty (str): Difficulty level ('easy', 'medium', 'hard').
-
-    Returns:
-        list[dict]: List of questions in dictionary format if successful.
-        None: If the request fails.
-    """
-    url = f"https://opentdb.com/api.php?amount={amount}&category={category_id}&difficulty={difficulty}&type=multiple"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        return data['results']
-    else:
-        messagebox.showerror("Error", "Failed to fetch questions")
-        return None
-
-
-def get_significant_word(text: str, highlighted: bool = False) -> str | None:
-    """
-    Extract the most significant word in the question.
-
-    Args:
-        text (str): The text of the question.
-        highlight (bool): Whether to highlight the significant word.
-
-    Returns:
-        str | None: The most significant word, optionally highlighted if enabled.
-    """
-    words = text.split()
-    if not words:
-        return None
-    
-    # Find the most significant word (longest word)
-    significant_word = max(words, key=len)
-
-    # Highlight the significant word if the flag is set
-    if highlighted:
-        return f"**{significant_word}**"
-    else:
-        return significant_word
 
 
 def welcome_window(root: tk.Tk) -> tk.StringVar:
@@ -159,7 +112,13 @@ def start_quiz(root: tk.Tk, selected_category: str, difficulty: str, num_questio
         None
     """
     if not selected_category:
-        messagebox.showwarning("Warning", "Please select a category")
+        messagebox.showwarning("Warning", "Please select category")
+        return
+    if not difficulty:
+        messagebox.showwarning("Warning", "Please select difficulty")
+        return
+    if not num_questions:
+        messagebox.showwarning("Warning", "Please select number of questions")
         return
 
     category_id = CATEGORIES[selected_category]
@@ -167,10 +126,34 @@ def start_quiz(root: tk.Tk, selected_category: str, difficulty: str, num_questio
     
     if not questions:
         return
+    
     if FIXED_GEOMETRY:
         root.geometry("300x400")  # Adjust window size for quiz if the flag is set
 
     load_question(root, questions, 0, 0, HIGHLIGHT_SIGNIFICANT_WORD)  # Load the first question
+
+
+def fetch_questions(amount: int = 5, category_id: int = 9, difficulty: str = 'medium') -> list[dict] | None:
+    """
+    Fetch trivia questions from the Open Trivia Database.
+
+    Args:
+        amount (int): Number of questions to fetch.
+        category_id (int): Category ID for the questions.
+        difficulty (str): Difficulty level ('easy', 'medium', 'hard').
+
+    Returns:
+        list[dict]: List of questions in dictionary format if successful.
+        None: If the request fails.
+    """
+    url = f"https://opentdb.com/api.php?amount={amount}&category={category_id}&difficulty={difficulty}&type=multiple"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return data['results']
+    else:
+        messagebox.showerror("Error", "Failed to fetch questions")
+        return None
 
 
 def load_question(root: tk.Tk, questions: list[dict], current_index: int, score: int, highlight: bool = False) -> None:
@@ -195,7 +178,7 @@ def load_question(root: tk.Tk, questions: list[dict], current_index: int, score:
 
     # Decode HTML entities and get the significant word
     question_text = html.unescape(question_data['question'])
-    significant_word = get_significant_word(question_text, False)
+    significant_word = get_significant_word(question_text, highlight)
 
     # Highlight the significant word if required
     if highlight and significant_word:
@@ -220,7 +203,8 @@ def load_question(root: tk.Tk, questions: list[dict], current_index: int, score:
         option_buttons.append(radio_btn)
 
     # Check if an image corresponding to the significant word exists
-    image_filename = f"images/{significant_word.lower()}.png" if significant_word else "images/question.png"
+    significant_word = significant_word.lower().strip(punctuation) if significant_word else "question"
+    image_filename = f"images/{significant_word}.png"
     if not os.path.exists(image_filename):
         image_filename = "images/question.png"
 
@@ -248,6 +232,31 @@ def load_question(root: tk.Tk, questions: list[dict], current_index: int, score:
         continue_button.config(state=tk.NORMAL)
 
     radio_value.trace_add("write", on_option_selected)
+
+
+def get_significant_word(text: str, highlighted: bool = False) -> str | None:
+    """
+    Extract the most significant word in the question.
+
+    Args:
+        text (str): The text of the question.
+        highlight (bool): Whether to highlight the significant word.
+
+    Returns:
+        str | None: The most significant word, optionally highlighted if enabled.
+    """
+    words = text.split()
+    if not words:
+        return None
+    
+    # Find the most significant word (longest word)
+    significant_word = max(words, key=len)
+
+    # Highlight the significant word if the flag is set
+    if highlighted:
+        return f"**{significant_word}**"
+    else:
+        return significant_word
 
 
 def next_question(root: tk.Tk, questions: list[dict], current_index: int, score: int, selected_answer: str, option_buttons: list[tk.Radiobutton], correct_answer: str) -> None:
