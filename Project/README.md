@@ -1,8 +1,8 @@
 # Quiz Game
 
-#### Video Demo: [Final Project](https://youtu.be/I69H-EpEzJs)
+## Video Demo: [Final Project](https://youtu.be/I69H-EpEzJs)
 
-#### Description:
+## Description
 
 My final project for this course is an interactive trivia quiz game. Tkinter was used to create the graphical user interface for this program. Gamers may choose the category, number of questions, and degree of difficulty while testing their knowledge on a range of subjects. Every trivia question is taken from the Open Trivia Database and formatted for ease of usage. To improve the experience, I decided to provide multiple-choice responses (instead of True/False) and graphic components.
 
@@ -35,7 +35,7 @@ My final project for this course is an interactive trivia quiz game. Tkinter was
 
 - **`test_project.py`**: Contains unit tests for the project using `pytest`. It includes tests for the core functions like `fetch_questions()`, `get_significant_word()`, `start_quiz()` and `show_final_score()`.
 
-- **`images/`**: Folder containing images for the significant word in the question. A default 200x200 pixels *question.png* image is present. Players may add their own images in the same format for different words. 
+- **`images/`**: Folder containing images for the significant word in the question. A default 200x200 pixels *question.png* image is present. Players may add their own images in the same format for different words.
 
 ### Design Choices
 
